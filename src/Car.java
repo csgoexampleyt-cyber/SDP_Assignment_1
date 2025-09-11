@@ -4,7 +4,8 @@ public class Car {
     private final String color;
     private final int year;
 
-    Car(CarBuilder builder) {
+    //So I had a problem, I thought that this constructor wasn't private when actually it's package-private
+     Car(CarBuilder builder) {
         this.brand = builder.getBrand();
         this.model = builder.getModel();
         this.color = builder.getColor();
