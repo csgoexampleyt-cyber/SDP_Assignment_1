@@ -4,7 +4,6 @@ public class CarBuilder {
     private String color;
     private int year;
 
-//Setters
     public CarBuilder setBrand(String brand) {
         this.brand = brand;
         return this;
@@ -25,8 +24,23 @@ public class CarBuilder {
         return this;
     }
 
-//Build method
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
     public Car build() {
-        return new Car(brand, model, color, year);
+        return new Car(this);
     }
 }
